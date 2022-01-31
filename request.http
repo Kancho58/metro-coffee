@@ -1,0 +1,8 @@
+### list of all items
+GET  http://localhost:3001/items
+
+### create a new item
+POST  http://localhost:3001/items
+
+### get item by ig
+GET http://localhost:3001/items/5c1a4bc4-c1bc-4b44-a29d-abae653cd22d

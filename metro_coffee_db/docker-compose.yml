@@ -1,0 +1,21 @@
+version: '3.9'
+
+services:
+  postgres_dev:
+    container_name: postgres-metrocoffee
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_DB: menu_management
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: aparna
+      PGDATA: /var/lib/postgresql/data
+    volumes:
+      - ./db-data:/var/lib/postgresql/data
+    ports:
+      - '5430:5432'
+    networks:
+      - postgres-metrocoffee-network
+
+networks:
+  postgres-metrocoffee-network:
